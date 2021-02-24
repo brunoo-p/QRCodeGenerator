@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E7A9B1B-7984-4969-8AED-2BED92F055F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QR</RootNamespace>
+    <AssemblyName>QR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\bruno\OneDrive\Área de Trabalho\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AF78F2B18388CE02317CC4813AC32DC895301344</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QR_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>github.png.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Link\AssociateLink.cs" />
+    <Compile Include="Business\OnlyText\OnlyText.cs" />
+    <Compile Include="Business\Skype\CallSkype.cs" />
+    <Compile Include="Business\Wifi\ConnectWifi.cs" />
+    <Compile Include="Business\WppMessage\WppMessage.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\Form_save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Form_save.Designer.cs">
+      <DependentUpon>Form_save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Form_skype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Form_skype.Designer.cs">
+      <DependentUpon>Form_skype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Form_wifi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Form_wifi.Designer.cs">
+      <DependentUpon>Form_wifi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Form_wpp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Form_wpp.Designer.cs">
+      <DependentUpon>Form_wpp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Link.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Link.Designer.cs">
+      <DependentUpon>Link.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\marketing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\marketing.Designer.cs">
+      <DependentUpon>marketing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\onlyText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\onlyText.Designer.cs">
+      <DependentUpon>onlyText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\ScannQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\ScannQR.Designer.cs">
+      <DependentUpon>ScannQR.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ui\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Form_save.resx">
+      <DependentUpon>Form_save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Form_skype.resx">
+      <DependentUpon>Form_skype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Form_wifi.resx">
+      <DependentUpon>Form_wifi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Form_wpp.resx">
+      <DependentUpon>Form_wpp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Link.resx">
+      <DependentUpon>Link.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\marketing.resx">
+      <DependentUpon>marketing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\onlyText.resx">
+      <DependentUpon>onlyText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\ScannQR.resx">
+      <DependentUpon>ScannQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QR_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fora_ar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\skype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\wpp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\samara_film.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\github.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Choose one of the options next door and have fun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="github.png.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
